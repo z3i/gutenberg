@@ -1,7 +1,7 @@
 Gutenberg
 =========
 
-[**Documentation**](http://rubydoc.info/github/somu/gutenberg/master/frames)
+[**Documentation**](http://rubydoc.info/github/somu/gutenberg/master/frames)  
 [**Gem**](http://rubygems.org/gems/gutenberg)
 
 **Gutenberg** is a documentation lifesaver when you are writing a large README.
