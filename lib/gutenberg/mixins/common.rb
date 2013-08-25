@@ -13,6 +13,10 @@ module Gutenberg
         line = '=' * name.length
         "#{name}\n#{line}"
       end
+
+      def semver
+        "**#{name}** uses [semantic versioning](http://semver.org)."
+      end
     end
   end
 end
