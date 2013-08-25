@@ -1,12 +1,14 @@
-**{{name}}** is a documentation lifesaver when you are writing a large README.
+**{{name}}** is a README.md lifesaver when you are writing it large.
 
-{{semver}}
-
-It has a lot of built-in mixins for your new README. Just use it.
+It generates static readme file from Mustache-powered markdown files,
+which link automatically. It has a built-in library of mixins, which
+you can port into your view.rb via including `Gutenberg::Mixins` module.
+More on that later, now basic features and how get it working.
 
 It has a built-in task for Rake, so you include it in your Rakefile:
 
 ```ruby
-require 'gutenberg/task'
-Gutenberg::Task.new
+{{include_into_rakefile}}
 ```
+
+It uses Uses {{semver}}. API may alter before I release 1.0.0.

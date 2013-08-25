@@ -15,7 +15,7 @@ module Gutenberg
       end
 
       def semver
-        "**#{name}** uses [semantic versioning](http://semver.org)."
+        "[semantic versioning](http://semver.org)"
       end
     end
   end

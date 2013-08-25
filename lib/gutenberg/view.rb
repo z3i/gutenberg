@@ -17,14 +17,18 @@ module Gutenberg
       repo
     end
 
-    templates = Dir["#{DIRECTORY}/*.md"]
-    templates.delete(STRUCTURE)
-
-    templates.each do |template|
-      name = File.basename(template, '.md')
-      define_method name do
-        ::View.render File.read(template).chomp
+    def self.load(pattern = "#{DIRECTORY}/*.md")
+      templates = Dir[pattern]
+      templates.delete(STRUCTURE)
+      puts templates
+      templates.each do |template|
+        name = File.basename(template, File.extname(template))
+        define_method name do
+          ::View.render File.read(template).chomp
+        end
       end
     end
+
+    load
   end
 end
