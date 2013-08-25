@@ -67,3 +67,7 @@ for your `{{head}}`:
 After you've setup books folder, start creating pages inside it. They will be
 automatically hooked and put into a variable with the same name: you can use
 them in your `structure.md`.
+
+When you are ready, run it!
+
+    $ rake readme
