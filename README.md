@@ -75,6 +75,7 @@ them in your `structure.md`.
 
 To understand how to write all this template things, just look into this repo's
 book folder. I love eating my own dog food. In fact, I cook it for myself.
+Barkety bark.
 
 When you are ready, run it!
 
