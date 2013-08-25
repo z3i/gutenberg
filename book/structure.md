@@ -1,6 +1,6 @@
 {{header}}
 
-**{{documentation}}**  
-**{{rubygems}}**
+{{documentation}}  
+{{rubygems}}
 
 {{introduction}}

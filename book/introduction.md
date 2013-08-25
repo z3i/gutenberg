@@ -1,4 +1,4 @@
-**Gutenberg** is a documentation lifesaver when you are writing a large README.
+**{{name}}** is a documentation lifesaver when you are writing a large README.
 
 {{semver}}
 
