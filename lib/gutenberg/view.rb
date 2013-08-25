@@ -20,7 +20,6 @@ module Gutenberg
     def self.load(pattern = "#{DIRECTORY}/*.md")
       templates = Dir[pattern]
       templates.delete(STRUCTURE)
-      puts templates
       templates.each do |template|
         name = File.basename(template, File.extname(template))
         define_method name do
