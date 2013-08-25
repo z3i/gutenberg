@@ -17,12 +17,12 @@ module Gutenberg
       end
 
       def gemnasium
-        url = "https://gemnasium.com/#@user/#@repo"
+        url = "https://gemnasium.com/#{user}/#{repo}"
         "[![Dependency status](#{url}.png)](#{url})"
       end
 
       def code_climate
-        url = "https://codeclimate.com/github/#@user/#@repo"
+        url = "https://codeclimate.com/github/#{user}/#{repo}"
         "[![Code readability](#{url}.png)](#{url})"
       end
     end
