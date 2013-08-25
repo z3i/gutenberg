@@ -1,6 +1,10 @@
 Gutenberg
 =========
 
+[![Gem version](https://badge.fury.io/rb/gutenberg.png)](http://rubygems.org/gems/gutenberg)  
+[![Dependency status](https://gemnasium.com/somu/gutenberg.png)](https://gemnasium.com/somu/gutenberg)  
+[![Code readability](https://codeclimate.com/github/somu/gutenberg.png)](https://codeclimate.com/github/somu/gutenberg)
+
 **Gutenberg** is a README.md lifesaver when you are writing it large.
 
 It uses [semantic versioning](http://semver.org) and [Mustache](http://mustache.github.io),
@@ -33,6 +37,10 @@ For example, this repo README's structure looks like this:
 
 ```md
 {{header}}
+
+{{gem_version}}  
+{{gemnasium}}  
+{{code_climate}}
 
 {{introduction}}
 
