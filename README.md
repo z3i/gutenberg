@@ -25,7 +25,7 @@ require 'gutenberg/task'
 Gutenberg::Task.new
 ```
 
-Then you create book folder inside your project folder, and create
+Then create book folder inside your project folder, and create
 two files there: `structure.md` and `view.rb`.
 
 Structure is hooked up first and should be a barebone of your README.
