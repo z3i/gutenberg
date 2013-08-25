@@ -4,7 +4,7 @@ It has a built-in task for Rake, so you include it in your Rakefile:
 {{include_into_rakefile}}
 ```
 
-Then you create book folder inside your project folder, and create
+Then create book folder inside your project folder, and create
 two files there: `structure.md` and `view.rb`.
 
 Structure is hooked up first and should be a barebone of your README.
