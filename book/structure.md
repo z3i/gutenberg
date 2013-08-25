@@ -1,6 +1,7 @@
 {{header}}
 
-{{documentation}}  
-{{rubygems}}
-
 {{introduction}}
+
+{{installation}}
+
+{{usage}}

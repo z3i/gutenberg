@@ -13,6 +13,8 @@ task :docs do
   ruby '-S yard stats'
 end
 
+GEM = 'gutenberg'
+
 def compiled_gems; Dir["./#{GEM}-*"]    end
 def latest_gem; compiled_gems.sort.last end
 
