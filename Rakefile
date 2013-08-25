@@ -1,4 +1,8 @@
+$:.unshift File.dirname(__FILE__) << '/lib'
 task :default => :spec
+
+require 'gutenberg/task'
+Gutenberg::Task.new
 
 desc 'Run specs'
 require 'rspec/core/rake_task'

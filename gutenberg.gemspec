@@ -13,4 +13,6 @@ Gem::Specification.new do |s|
   s.license = 'MIT'
   s.summary = 'Documentation toolbox'
   s.description = 'Write dynamic READMEs using mixins, and build them into your static README.md'
+
+  s.add_dependency 'mustache', '~> 0.99'
 end
