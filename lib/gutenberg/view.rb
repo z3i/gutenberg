@@ -17,7 +17,7 @@ module Gutenberg
       repo
     end
 
-    def self.load(pattern = "#{DIRECTORY}/*.md")
+    def self.load(pattern)
       templates = Dir[pattern]
       templates.delete(STRUCTURE)
       templates.each do |template|
@@ -28,6 +28,6 @@ module Gutenberg
       end
     end
 
-    load
+    load "#{DIRECTORY}/*.md"
   end
 end
