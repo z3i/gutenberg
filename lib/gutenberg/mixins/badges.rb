@@ -21,10 +21,14 @@ module Gutenberg
         "[![Dependency status](#{url}.png)](#{url})"
       end
 
-      def code_climate
+      def codeclimate
         url = "https://codeclimate.com/github/#{user}/#{repo}"
         "[![Code readability](#{url}.png)](#{url})"
       end
+
+      alias code_climate codeclimate
+      alias gemversion gem_version
+      alias travis_ci travis
     end
   end
 end
