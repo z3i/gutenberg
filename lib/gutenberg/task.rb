@@ -9,12 +9,15 @@ module Gutenberg
     def initialize
       desc 'Compile README.md' unless Rake.application.last_comment
       task :readme do
-        open('README.md', 'w') { |f| Gutenberg.run(f) }
+        original = $stdout.clone
+        $stdout.reopen File.open('README.md', 'w+')
+        require './book/context'
+        $stdout.reopen original
       end
 
       desc 'See README.md' unless Rake.application.last_comment
       task :see_readme do
-        Gutenberg.run
+        require './book/context'
       end
     end
   end

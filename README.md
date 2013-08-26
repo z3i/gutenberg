@@ -1,3 +1,8 @@
+book/installation.md
+book/introduction.md
+book/usage.md
+examples/context_example.rb
+examples/rakefile.rb
 Gutenberg
 =========
 
@@ -12,7 +17,7 @@ both are cool and I appreciate their usage.
 
 It generates static readme file from Mustache-powered markdown files,
 which link automatically. It has a built-in library of mixins, which
-you can port into your `view.rb` via including `Gutenberg::Mixins`
+you can port into your `context.rb` via including `Gutenberg::Mixins`
 module. More on that later, now basic features and how to get it working.
 
 Gutenberg is avaliable as a gem, working under Ruby 1.8...2.0:
@@ -30,7 +35,7 @@ Gutenberg::Task.new
 ```
 
 Then create book folder inside your project folder, and create
-two files there: `structure.md` and `view.rb`.
+two files there: `structure.md` and `context.rb`.
 
 Structure is hooked up first and should be a barebone of your README.
 For example, this repo README's structure looks like this:
@@ -50,20 +55,19 @@ For example, this repo README's structure looks like this:
 ```
 
 As you see, `books/introduction.md` can be loaded just using Mustache's
-`{{introduction}}` variable. So treat `structure.md` as a bookcover for
-your book pages (I won't ever call it `bookcover.md`, I swear).
+`{{introduction}}` variable. So treat `structure.md` as a bookcover
+for your book pages (I won't ever call it `bookcover.md`, I swear).
 
-View is required for writing all the variables inside it. If you want to include
-a mixin for Gutenberg, do it there. Your repo, your name — write there.
+Context is required for writing all the variables inside it. If you want to
+include a mixin for Gutenberg, do it there. Your repo, your name — write there.
 Everything you want to be stored in variable or be dynamic. Example:
 
 ```ruby
 require 'gutenberg/mixins'
 
-class View < Gutenberg::View
-  def repo; 'sword' end
-  def user; 'somu'  end
-
+Gutenberg.new do
+  def repo; 'sword'     end
+  def user; 'somu'      end
   include Gutenberg::Mixins
 end
 ```

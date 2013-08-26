@@ -5,5 +5,5 @@ both are cool and I appreciate their usage.
 
 It generates static readme file from Mustache-powered markdown files,
 which link automatically. It has a built-in library of mixins, which
-you can port into your `view.rb` via including `Gutenberg::Mixins`
+you can port into your `context.rb` via including `Gutenberg::Mixins`
 module. More on that later, now basic features and how to get it working.

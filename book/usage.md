@@ -1,11 +1,11 @@
 It has a built-in task for Rake, so you include it in your Rakefile:
 
 ```ruby
-{{include_into_rakefile}}
+{{rakefile}}
 ```
 
 Then create book folder inside your project folder, and create
-two files there: `structure.md` and `view.rb`.
+two files there: `structure.md` and `context.rb`.
 
 Structure is hooked up first and should be a barebone of your README.
 For example, this repo README's structure looks like this:
@@ -15,22 +15,22 @@ For example, this repo README's structure looks like this:
 ```
 
 As you see, `books/introduction.md` can be loaded just using Mustache's
-{{introduction_variable}} variable. So treat `structure.md` as a bookcover for
-your book pages (I won't ever call it `bookcover.md`, I swear).
+{{mustache_introduction}} variable. So treat `structure.md` as a bookcover
+for your book pages (I won't ever call it `bookcover.md`, I swear).
 
-View is required for writing all the variables inside it. If you want to include
-a mixin for Gutenberg, do it there. Your repo, your name — write there.
+Context is required for writing all the variables inside it. If you want to
+include a mixin for Gutenberg, do it there. Your repo, your name — write there.
 Everything you want to be stored in variable or be dynamic. Example:
 
 ```ruby
-{{view}}
+{{context_example}}
 ```
 
 This one includes all built-in Gutenberg mixins and sets your repo to 'sword'
 and user to 'somu'. Those two variables are very important in Gutenberg. After
 setting them, you can easily generate a header, for example, using built-in
-{{header_variable}} variable, so in that case you'd receive something like this
-for your {{header_variable}}:
+{{mustache_header}} variable, so in that case you'd receive something like this
+for your {{mustache_header}}:
 
     Sword
     =====
