@@ -5,7 +5,6 @@ module Gutenberg
     def self.load(pattern, exclude = [])
       templates = Dir[pattern] - Array(exclude)
       templates.each do |template|
-        puts template
         name = File.basename template, File.extname(template)
         define_method(name) { render File.read(template).chomp }
       end

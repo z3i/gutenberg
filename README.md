@@ -1,8 +1,3 @@
-book/installation.md
-book/introduction.md
-book/usage.md
-examples/context_example.rb
-examples/rakefile.rb
 Gutenberg
 =========
 
