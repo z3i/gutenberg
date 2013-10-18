@@ -8,7 +8,7 @@ pieces of code, et cetera. So, use it for everything that you want to store or t
 
 Context is not required. You can delete your `context.yml` if you don’t need any variables.
 
-Here are examples of most:
+Here are examples:
 
 #### `context.yml`
 

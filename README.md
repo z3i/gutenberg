@@ -8,7 +8,7 @@ Gutenberg
 **Gutenberg** dynamically compiles multiple templates into one README.
 
 It generates static readme file from Mustache-powered plaintext files,
-which link automatically. It has a built-in library of mixins module.
+which link automatically. It has a built-in library of mixins.
 More on that later, now basic features and how to get it working.
 
 It uses [semantic versioning](http://semver.org) and [Mustache](http://mustache.github.io),
@@ -45,11 +45,12 @@ pieces of code, et cetera. So, use it for everything that you want to store or t
 
 Context is not required. You can delete your `context.yml` if you don’t need any variables.
 
-Here are examples of most:
+Here are examples:
 
 #### `context.yml`
 
 ```yaml
+pretty_anything_you_want: Hey there!
 user: somu
 repo: sword
 ```
@@ -59,7 +60,8 @@ repo: sword
 ```json
 {
   "user": "somu",
-  "repo": "sword"
+  "repo": "sword",
+  "contributors": "Josh Kauffman and Jackson Gariety"
 }
 ```
 
