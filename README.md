@@ -32,7 +32,7 @@ Then you go to your project folder and say:
 
     $ gutenberg --init
 
-It generated all required scaffolding: `book` folder, `context.json` and `structure.md`.
+It generates all the scaffolding: `book` folder, `context.yml` and `structure.md`.
 Now let's continue with configuring it for your project.
 
 Context
