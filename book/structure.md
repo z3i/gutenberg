@@ -6,6 +6,10 @@
 
 {{introduction}}
 
+{{everywhere}}
+
+{{on_context}}
+
 {{installation}}
 
 {{usage}}

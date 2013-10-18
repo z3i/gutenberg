@@ -5,22 +5,65 @@ Gutenberg
 [![Dependency status](https://gemnasium.com/somu/gutenberg.png)](https://gemnasium.com/somu/gutenberg)
 [![Code readability](https://codeclimate.com/github/somu/gutenberg.png)](https://codeclimate.com/github/somu/gutenberg)
 
-**Gutenberg** is a README.md lifesaver when you are writing it large.
+**Gutenberg** compiles multiple templates into one README.
+
+It generates static readme file from Mustache-powered plaintext files,
+which link automatically. It has a built-in library of mixins module.
+More on that later, now basic features and how to get it working.
 
 It uses [semantic versioning](http://semver.org) and [Mustache](http://mustache.github.io),
 both are cool and I appreciate their usage.
 
-It generates static readme file from Mustache-powered markdown files,
-which link automatically. It has a built-in library of mixins, which
-you can port into your `context.rb` via including `Gutenberg::Mixins`
-module. More on that later, now basic features and how to get it working.
+Everywhere
+----------
+
+You can use Gutenberg everywhere: your project doesn’t need to be written in Ruby.
+Any language is OK, whether it is Python, PHP, or any other you prefer.
+
+Context
+-------
+
+Context file is a file that is named `context` and has `.json`, `.yml` or `.rb` extension.
+
+Contexts contain all variables you want to write only once: your repo name, your project name,
+pieces of code, et cetera.
+
+It is not required. You can delete it if you don’t need any variables.
+
+Here are examples:
+
+### `context.yml`
+
+user: somu
+repo: sword
+
+### `context.json`
+
+
+
+### `context.rb`
+
+Use `context.rb` if you need some advanced features, like putting your gem’s last version in a constant,  
+putting your program’s help message inside of README, and so on. Get used to this DSL:
+
+Gutenberg.new do
+  repo 'sword'
+  user 'somu'
+end
+
+Get started
+------------
 
 Gutenberg is avaliable as a gem, working under Ruby 1.8...2.1:
 
     $ gem install gutenberg
 
-So, I suppose you've installed it all right. Now let's continue
-with configuring it in your project.
+Then you go to your project folder and say:
+
+    $ gutenberg --init
+
+It generated all required scaffolding: `book` folder, `context.json` and `structure.md`.
+Now let's continue with configuring it for your project.
 
 It has a built-in task for Rake, so you include it in your Rakefile:
 
@@ -44,6 +87,10 @@ For example, this repo README's structure looks like this:
 
 {{introduction}}
 
+{{everywhere}}
+
+{{on_context}}
+
 {{installation}}
 
 {{usage}}
@@ -59,10 +106,7 @@ include a mixin for Gutenberg, do it there. Your repo, your name — write there
 Everything you want to be stored in variable or be dynamic. Example:
 
 ```ruby
-Gutenberg.new do
-  repo 'sword'
-  user 'somu'
-end
+
 ```
 
 This one includes all built-in Gutenberg mixins and sets your repo to 'sword'
