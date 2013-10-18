@@ -10,6 +10,12 @@ module Gutenberg
       end
     end
 
+    def self.method_missing(method, *args, &block)
+      raise ArgumentError if block_given? and not args.empty?
+      define_method(method, &block) if block_given?
+      args.empty? ? raise(ArgumentError) : define_method(method) { args.first }
+    end
+
     def escapeHTML(str); str  end
     def name; repo.capitalize end
     def rubygem; repo         end
