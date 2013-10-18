@@ -5,7 +5,7 @@ module Gutenberg
                    file        = 'README' << File.extname(Dir[structure].first),
                    pattern     = "#{directory}/*.*",
                    context     = "#{directory}/context.*",
-                   mixins      = Gutenberg::Mixins
+                   mixins      = Gutenberg::Mixins,
                    &block)
       @directory = directory
       @structure = structure
@@ -28,19 +28,20 @@ module Gutenberg
     end
 
     def include_mixins
-      @mixins.each { |m| include m }
+      Array(@mixins).each { |m| include m }
     end
 
     def context_with(hash)
+      mixins = Array(@mixins)
       Gutenberg.new {
         hash.each do |k,v|
           define_method(k) { v }
         end
-        include_mixins
+        mixins.each { |m| include m }
       }
     end
 
-    def load_via(engine)
+    def via(engine)
       engine.send :load, File.read(@context)
     end
 
@@ -51,10 +52,10 @@ module Gutenberg
         require './' << @context
       when '.yml'
         require 'yaml'
-        context_with load_via YAML
+        context_with via(YAML)
       when '.json'
         require 'json'
-        context_with load_via JSON
+        context_with via(JSON)
       end
     end
 
