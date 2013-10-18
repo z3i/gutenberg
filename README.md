@@ -121,7 +121,6 @@ For example, this repo README's structure looks like this:
 {{rake}}
 
 {{workarounds}}
-
 ```
 
 As you see, `books/introduction.md` can be loaded just using Mustache's
