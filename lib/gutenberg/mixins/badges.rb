@@ -29,6 +29,7 @@ module Gutenberg
       alias code_climate codeclimate
       alias gemversion gem_version
       alias travis_ci travis
+      alias travisci travis
     end
   end
 end

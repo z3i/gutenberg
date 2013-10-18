@@ -7,4 +7,3 @@ require 'gutenberg/options'
 require 'gutenberg/parser'
 require 'gutenberg/mixins'
 require 'gutenberg/main'
-

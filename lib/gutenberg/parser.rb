@@ -6,7 +6,7 @@ module Gutenberg
       @options = {}
       @parser = OptionParser.new do |parser|
         @parser = parser
-        methods.delete_if { |m| not m.to_s.start_with? 'parse_'}.sort.each { |m| send m }
+        methods.delete_if { |m| not m.to_s.start_with? 'parse_' }.sort.each { |m| send m }
       end
     end
 
