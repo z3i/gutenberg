@@ -16,7 +16,7 @@ module Gutenberg
 
     def parse_directory
       on '-d', '--directory <path>', 'Specify documentation directory' do |path|
-        @options << path
+        set :directory, path
       end
     end
   end

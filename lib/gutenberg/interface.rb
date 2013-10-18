@@ -36,8 +36,14 @@ module Gutenberg
       end
     end
 
+    def process
+      write { inject }
+    end
+
     def run
-      Parser.new.parse
+      Parser.new.parse.each do |o,v|
+        instance_variable_set "@#{o}", v
+      end
     end
 
     def self.run(*args)

@@ -14,6 +14,10 @@ module Gutenberg
       @parser.on(*args, &block)
     end
 
+    def set(option, value)
+      @options[option] = value
+    end
+
     def parse
       @parser.parse!
       @options
