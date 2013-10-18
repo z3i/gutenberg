@@ -20,15 +20,15 @@ module Gutenberg
     end
 
     def parse_help
-      on('-h', '--help', 'Prints this message out') do
+      on '-h', '--help', 'Prints this message out' do
         puts @parser
         exit
       end
     end
 
     def parse_version
-      on('-v', '--version', 'Prints Gutenberg version') do
-        puts Gutenberg::VERSION
+      on '-v', '--version', 'Prints Gutenberg version' do
+        puts 'Gutenberg ' << Gutenberg::VERSION
         exit
       end
     end
