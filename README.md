@@ -209,7 +209,7 @@ Full list of avaliable mixins:
 Eating my own dog food
 ----------------------
 
-Gutenberg loves using Gutenberg. Take a look at `book` folder in this repo,
+Gutenberg loves using Gutenberg. Take a look at the [`book` folder](https://github.com/{{user}}/{{repo}}/tree/master//book) in this repo,
 you will see a good example of Gutenberg usage, just how Gutenberg authors
 use Gutenberg. Gutenberg rules.
 
