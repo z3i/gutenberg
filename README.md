@@ -47,14 +47,14 @@ It is not required. You can delete it if you don’t need any variables.
 
 Here are examples:
 
-### `context.yml`
+#### `context.yml`
 
 ```yaml
 user: somu
 repo: sword
 ```
 
-### `context.json`
+#### `context.json`
 
 ```json
 {
@@ -63,7 +63,7 @@ repo: sword
 }
 ```
 
-### `context.rb`
+#### `context.rb`
 
 Use `context.rb` if you need some advanced features, like putting your gem’s last version in a constant,  
 putting your program’s help message inside of README, and so on. Get used to this DSL:
