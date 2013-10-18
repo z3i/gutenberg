@@ -19,5 +19,29 @@ module Gutenberg
         set :directory, path
       end
     end
+
+    def parse_structure
+      on '-s', '--structure <pattern>', 'Specify structure pattern' do |pattern|
+        set :structure, pattern
+      end
+    end
+
+    def parse_file
+      on '-f', '--file <path>', 'Change resulting file name, README.md by default' do |path|
+        set :file, path
+      end
+    end
+
+    def parse_pattern
+      on '-p', '--pattern <pattern>', 'Specify including file matching pattern' do |pattern|
+        set :pattern, pattern
+      end
+    end
+
+    def parse_context
+      on '-c', '--context <path>', 'Specify context file' do |path|
+        set :context, context
+      end
+    end
   end
 end
