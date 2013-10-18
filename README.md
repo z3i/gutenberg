@@ -50,9 +50,12 @@ Here are examples:
 #### `context.yml`
 
 ```yaml
-pretty_anything_you_want: Hey there!
-user: somu
-repo: sword
+version: 4.0.0
+user: rails
+repo: rails
+
+mvc: "[MVC](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)"
+mit: "[MIT](http://www.opensource.org/licenses/MIT)"
 ```
 
 #### `context.json`
