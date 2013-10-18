@@ -19,7 +19,7 @@ module Gutenberg
       end
 
       def repourl
-        "https://github.com/{{user}}/{{repo}}/tree/master/"
+        "https://github.com/#{user}/#{repo}/tree/master/"
       end
 
       alias repo_url repourl
