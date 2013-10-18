@@ -25,10 +25,16 @@ module Gutenberg
       $stdout.reopen original
     end
 
-    def define_options(hash)
-      context.each do |k,v|
-        define_method(k) { v }
-      end
+    def context_with(hash)
+      Gutenberg.new {
+        hash.each do |k,v|
+          define_method(k) { v }
+        end
+      }
+    end
+
+    def load_via(engine)
+      engine.send :load, File.read(@context)
     end
 
     def inject
@@ -38,14 +44,10 @@ module Gutenberg
         require './' << @context
       when '.yml'
         require 'yaml'
-        Gutenberg.new {
-          define_options YAML.load(@context)
-        }
+        context_with load_via YAML
       when '.json'
         require 'json'
-        Gutenberg.new {
-          define_options JSON.load(@context)
-        }
+        context_with load_via JSON
       end
     end
 
