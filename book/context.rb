@@ -10,13 +10,14 @@ Gutenberg.new do
     Dir['lib/gutenberg/mixins/*.rb'].each do |f|
       name = nil
       file = File.read(f)
-      file.gsub(/module (\w+)/) { name = $1 }
+      file.gsub(/module (\w+)\n/) { name = $1 }
       meths[name] = Array.new
 
-      file.gsub(/def (\w+)/) { meths[name] << $1 }
+      file.gsub(/def (\w+)\n/) { meths[name] << $1 }
     end
     output = ''
     meths.each do |n,ms|
+      next if ms.empty?
       output << "#### #{n}\n\n"
       ms.each { |m| output << "+ `{{#{m}}}`\n"}
       output << "\n"
