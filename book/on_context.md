@@ -37,3 +37,8 @@ In fact, it is equivalent to this:
 {{old_ruby_example}}
 ```
 
+Gutenberg itself uses this `context.rb`:
+
+```ruby
+{{self_context}}
+```

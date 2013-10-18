@@ -8,7 +8,7 @@ Structure is hooked up first and should be a barebone of your README.
 For example, this repo README's structure looks like this:
 
 ```md
-{{structure}}
+{{self_structure}}
 ```
 
 As you see, `books/introduction.md` can be loaded just using Mustache's
