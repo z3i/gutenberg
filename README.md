@@ -202,7 +202,7 @@ Full list of avaliable mixins:
 + `{{rubygems}}`
 + `{{header}}`
 + `{{semver}}`
-+ `{{repourl}}`
++ `{{repo_url}}`
 
 
 
@@ -211,9 +211,7 @@ Eating my own dog food
 
 Gutenberg loves using Gutenberg. Take a look at the [`book` folder](https://github.com/somu/gutenberg/tree/master//book) in this repo,
 you will see a good example of Gutenberg usage, just how Gutenberg authors
-use Gutenberg. Gutenberg rules.
-
-*Gutenberg.*
+use Gutenberg. **Gutenberg rules.**
 
 Rake integration
 ----------------
