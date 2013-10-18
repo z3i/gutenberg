@@ -25,14 +25,27 @@ module Gutenberg
       $stdout.reopen original
     end
 
+    def define_options(hash)
+      context.each do |k,v|
+        define_method(k) { v }
+      end
+    end
+
     def inject
+      return Gutenberg.new unless @context
       case File.extname(@context)
       when '.rb'
         require './' << @context
       when '.yml'
-        context = YAML.load(@context)
+        require 'yaml'
+        Gutenberg.new {
+          define_options YAML.load(@context)
+        }
       when '.json'
-        context = JSON.load(@context)
+        require 'json'
+        Gutenberg.new {
+          define_options JSON.load(@context)
+        }
       end
     end
 
