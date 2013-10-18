@@ -34,22 +34,31 @@ Here are examples:
 
 ### `context.yml`
 
+```yaml
 user: somu
 repo: sword
+```
 
 ### `context.json`
 
-
+```json
+{
+  "user": "somu",
+  "repo": "sword"
+}
+```
 
 ### `context.rb`
 
 Use `context.rb` if you need some advanced features, like putting your gem’s last version in a constant,  
 putting your program’s help message inside of README, and so on. Get used to this DSL:
 
+```ruby
 Gutenberg.new do
   repo 'sword'
   user 'somu'
 end
+```
 
 Get started
 ------------
