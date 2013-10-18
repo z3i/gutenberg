@@ -4,11 +4,11 @@ Context
 Context file is a file that is named `context` and has `.json`, `.yml` or `.rb` extension.
 
 Contexts contain all variables you want to write only once: your repo name, your project name,
-pieces of code, et cetera.
+pieces of code, et cetera. So, use it for everything that you want to store or to be dynamic.
 
-It is not required. You can delete it if you don’t need any variables.
+Context is not required. You can delete your `context.yml` if you don’t need any variables.
 
-Here are examples:
+Here are examples of most:
 
 #### `context.yml`
 

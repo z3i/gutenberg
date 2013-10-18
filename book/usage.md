@@ -1,9 +1,3 @@
-It has a built-in task for Rake, so you include it in your Rakefile:
-
-```ruby
-{{rakefile}}
-```
-
 Then create book folder inside your project folder, and create
 two files there: `structure.md` and `context.rb`.
 
@@ -42,7 +36,3 @@ them in your `structure.md`.
 To understand how to write all this template things, just look into this repo's
 book folder. I love eating my own dog food. In fact, I cook it for myself.
 Barkety bark.
-
-When you are ready, run it!
-
-    $ rake readme

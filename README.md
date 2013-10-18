@@ -41,11 +41,11 @@ Context
 Context file is a file that is named `context` and has `.json`, `.yml` or `.rb` extension.
 
 Contexts contain all variables you want to write only once: your repo name, your project name,
-pieces of code, et cetera.
+pieces of code, et cetera. So, use it for everything that you want to store or to be dynamic.
 
-It is not required. You can delete it if you don’t need any variables.
+Context is not required. You can delete your `context.yml` if you don’t need any variables.
 
-Here are examples:
+Here are examples of most:
 
 #### `context.yml`
 
@@ -84,13 +84,6 @@ Gutenberg.new do
 end
 ```
 
-
-It has a built-in task for Rake, so you include it in your Rakefile:
-
-```ruby
-require 'gutenberg/task'
-Gutenberg::Task.new
-```
 
 Then create book folder inside your project folder, and create
 two files there: `structure.md` and `context.rb`.
@@ -131,6 +124,19 @@ To understand how to write all this template things, just look into this repo's
 book folder. I love eating my own dog food. In fact, I cook it for myself.
 Barkety bark.
 
-When you are ready, run it!
+Rake integration
+----------------
+
+Gutenberg easily integrates with Rake.
+
+You include this portion of code in your Rakefile:
+
+```ruby
+require 'gutenberg/task'
+Gutenberg::Task.new
+```
+
+It adds two tasks, `see_readme` (for preview) and `readme` (for generating).  
+You’re pretty ready to use them!
 
     $ rake readme
