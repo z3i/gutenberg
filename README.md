@@ -155,6 +155,8 @@ For example, this repo README's structure looks like this:
 
 {{mixins}}
 
+{{dog_food}}
+
 {{rake}}
 
 {{workarounds}}
@@ -202,6 +204,15 @@ Full list of avaliable mixins:
 + `{{semver}}`
 
 
+
+Eating my own dog food
+----------------------
+
+Gutenberg loves using Gutenberg. Take a look at `book` folder in this repo,
+you will see a good example of Gutenberg usage, just how Gutenberg authors
+use Gutenberg. Gutenberg rules.
+
+*Gutenberg.*
 
 Rake integration
 ----------------
