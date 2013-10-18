@@ -12,7 +12,6 @@ Gutenberg.new do
       file = File.read(f)
       file.gsub(/module (\w+)\n/) { name = $1 }
       meths[name] = Array.new
-
       file.gsub(/def (\w+)\n/) { meths[name] << $1 }
     end
     output = ''
