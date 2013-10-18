@@ -8,8 +8,8 @@
 
 {{everywhere}}
 
-{{on_context}}
-
 {{installation}}
+
+{{on_context}}
 
 {{usage}}
