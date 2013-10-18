@@ -15,7 +15,7 @@ which link automatically. It has a built-in library of mixins, which
 you can port into your `context.rb` via including `Gutenberg::Mixins`
 module. More on that later, now basic features and how to get it working.
 
-Gutenberg is avaliable as a gem, working under Ruby 1.8...2.0:
+Gutenberg is avaliable as a gem, working under Ruby 1.8...2.1:
 
     $ gem install gutenberg
 
@@ -47,6 +47,7 @@ For example, this repo README's structure looks like this:
 {{installation}}
 
 {{usage}}
+
 ```
 
 As you see, `books/introduction.md` can be loaded just using Mustache's

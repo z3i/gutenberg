@@ -1,5 +1,6 @@
 task :default => :readme
 
+$:.unshift('./lib')
 require 'gutenberg/task'
 Gutenberg::Task.new
 

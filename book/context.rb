@@ -1,16 +1,11 @@
-require 'gutenberg/mixins'
-
 Gutenberg.new do
-  def repo; 'gutenberg' end
-  def user; 'somu'      end
-  
-  def structure
-    read 'book/structure.md'
-  end
+  repo 'gutenberg'
+  user 'somu'
 
-  def mustache_introduction; '`{{introduction}}`' end
-  def mustache_header;       '`{{head}}`'         end
+  structure { read 'book/structure.md' }
+
+  mustache_introduction '`{{introduction}}`'
+  mustache_header       '`{{head}}`'
 
   load 'examples/*'
-  include Gutenberg::Mixins
 end

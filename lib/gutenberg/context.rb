@@ -16,8 +16,13 @@ module Gutenberg
       args.empty? ? raise(ArgumentError, "#{method} doesn’t have a value") : define_method(method) { args.first }
     end
 
-    def escapeHTML(str); str end
-    name { repo.capitalize }
-    rubygem { repo }
+    def self.include_mixins(mixins)
+      return unless mixins
+      Array(mixins).each { |m| include m }
+    end
+
+    def escapeHTML(str); str  end
+    def name; repo.capitalize end
+    def rubygem; repo         end
   end
 end

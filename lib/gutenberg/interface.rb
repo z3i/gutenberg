@@ -27,17 +27,11 @@ module Gutenberg
       $stdout.reopen original
     end
 
-    def include_mixins
-      Array(@mixins).each { |m| include m }
-    end
-
     def context_with(hash)
-      mixins = Array(@mixins)
       Gutenberg.new {
         hash.each do |k,v|
           define_method(k) { v }
         end
-        mixins.each { |m| include m }
       }
     end
 
@@ -46,7 +40,8 @@ module Gutenberg
     end
 
     def inject
-      return Gutenberg.new { include_mixins } unless @context
+      Gutenberg.mixins = @mixins
+      return Gutenberg.new unless @context
       case File.extname(@context)
       when '.rb'
         require './' << @context

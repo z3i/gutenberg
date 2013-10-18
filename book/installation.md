@@ -1,4 +1,4 @@
-{{name}} is avaliable as a gem, working under Ruby 1.8...2.0:
+{{name}} is avaliable as a gem, working under Ruby 1.8...2.1:
 
     $ gem install gutenberg
 
