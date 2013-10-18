@@ -11,13 +11,13 @@ module Gutenberg
     end
 
     def self.method_missing(method, *args, &block)
-      raise ArgumentError if block_given? and not args.empty?
-      define_method(method, &block) if block_given?
-      args.empty? ? raise(ArgumentError) : define_method(method) { args.first }
+      raise ArgumentError, "#{method} passes both block and #{args.inspect}" if block_given? and not args.empty?
+      return define_method(method, &block) if block_given?
+      args.empty? ? raise(ArgumentError, "#{method} doesn’t have a value") : define_method(method) { args.first }
     end
 
-    def escapeHTML(str); str  end
-    def name; repo.capitalize end
-    def rubygem; repo         end
+    def escapeHTML(str); str end
+    name { repo.capitalize }
+    rubygem { repo }
   end
 end
