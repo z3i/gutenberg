@@ -18,11 +18,11 @@ module Gutenberg
         "[semantic versioning](http://semver.org)"
       end
 
-      def repourl
+      def repo_url
         "https://github.com/#{user}/#{repo}/tree/master/"
       end
 
-      alias repo_url repourl
+      alias repourl repo_url
     end
   end
 end
