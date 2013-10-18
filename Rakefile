@@ -1,17 +1,7 @@
-$:.unshift File.dirname(__FILE__) << '/lib'
-task :default => :spec
+task :default => :readme
 
 require 'gutenberg/task'
 Gutenberg::Task.new
-
-desc 'Run specs'
-require 'rspec/core/rake_task'
-RSpec::Core::RakeTask.new(:spec)
-
-desc 'Check documentation coverage'
-task :docs do 
-  ruby '-S yard stats'
-end
 
 GEM = 'gutenberg'
 
