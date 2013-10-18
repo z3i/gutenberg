@@ -14,7 +14,7 @@
 
 {{on_structure}}
 
-{{usage}}
+{{mixins}}
 
 {{rake}}
 

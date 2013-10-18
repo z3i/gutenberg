@@ -32,7 +32,7 @@ Then you go to your project folder and say:
 
     $ gutenberg --init
 
-It generates all the scaffolding: `book` folder, `context.yml` and `structure.md`.
+It generates all the scaffolding: `book` folder, `context.yml` and `structure.md`.  
 Now let's continue with configuring it for your project.
 
 Context
@@ -98,7 +98,26 @@ Gutenberg.new do
 
   self_structure { read 'book/structure.md'  }
   self_context   { read 'book/context.rb'    }
-  
+
+  describe_mixins do
+    meths = Hash.new
+    Dir['lib/gutenberg/mixins/*.rb'].each do |f|
+      name = nil
+      file = File.read(f)
+      file.gsub(/module (\w+)/) { name = $1 }
+      meths[name] = Array.new
+
+      file.gsub(/def (\w+)/) { meths[name] << $1 }
+    end
+    output = ''
+    meths.each do |n,ms|
+      output << "#### #{n}\n\n"
+      ms.each { |m| output << "+ `{{#{m}}}`\n"}
+      output << "\n"
+    end
+    output
+  end
+
   options `./bin/gutenberg -h`.chomp
 
   mustache_introduction '`{{introduction}}`'
@@ -134,7 +153,7 @@ For example, this repo README's structure looks like this:
 
 {{on_structure}}
 
-{{usage}}
+{{mixins}}
 
 {{rake}}
 
@@ -161,6 +180,30 @@ them in your `structure.md`.
 To understand how to write all this template things, just look into this repo's
 book folder. I love eating my own dog food. In fact, I cook it for myself.
 Barkety bark.
+
+Mixins
+------
+
+Full list of avaliable mixins:
+
+#### Badges
+
++ `{{travis}}`
++ `{{gem_version}}`
++ `{{coveralls}}`
++ `{{gemnasium}}`
++ `{{codeclimate}}`
+
+#### Links
+
++ `{{documentation}}`
++ `{{rubygems}}`
++ `{{header}}`
++ `{{semver}}`
+
+#### Methods
+
++ `{{read}}`
 
 
 
