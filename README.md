@@ -59,12 +59,9 @@ include a mixin for Gutenberg, do it there. Your repo, your name — write there
 Everything you want to be stored in variable or be dynamic. Example:
 
 ```ruby
-require 'gutenberg/mixins'
-
 Gutenberg.new do
-  def repo; 'sword'     end
-  def user; 'somu'      end
-  include Gutenberg::Mixins
+  repo 'sword'
+  user 'somu'
 end
 ```
 
