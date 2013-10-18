@@ -30,3 +30,10 @@ putting your program’s help message inside of README, and so on. Get used to t
 ```ruby
 {{ruby_example}}
 ```
+
+In fact, it is equivalent to this:
+
+```ruby
+{{old_ruby_example}}
+```
+

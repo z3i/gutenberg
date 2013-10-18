@@ -75,6 +75,16 @@ Gutenberg.new do
 end
 ```
 
+In fact, it is equivalent to this:
+
+```ruby
+Gutenberg.new do
+  def user; 'somu' end
+  def repo; 'gutenberg' end
+end
+```
+
+
 It has a built-in task for Rake, so you include it in your Rakefile:
 
 ```ruby
