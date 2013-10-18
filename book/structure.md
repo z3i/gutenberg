@@ -12,6 +12,8 @@
 
 {{on_context}}
 
+{{on_structure}}
+
 {{usage}}
 
 {{rake}}

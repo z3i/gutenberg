@@ -90,8 +90,11 @@ end
 ```
 
 
-Then create book folder inside your project folder, and create
-two files there: `structure.md` and `context.rb`.
+Structure
+---------
+
+Structure is the only obligatory file to have in Gutenberg.  
+Structure is a file called `structure` in `book` folder with any extension.
 
 Structure is hooked up first and should be a barebone of your README.
 For example, this repo README's structure looks like this:
@@ -101,16 +104,8 @@ book/structure.md
 ```
 
 As you see, `books/introduction.md` can be loaded just using Mustache's
-`{{introduction}}` variable. So treat `structure.md` as a bookcover
-for your book pages (I won't ever call it `bookcover.md`, I swear).
-
-Context is required for writing all the variables inside it. If you want to
-include a mixin for Gutenberg, do it there. Your repo, your name — write there.
-Everything you want to be stored in variable or be dynamic. Example:
-
-```ruby
-
-```
+`{{introduction}}` variable. So treat `structure.md` like you’d treat
+a bookcover for your book pages (I won't ever call it `bookcover`, I swear).
 
 This one includes all built-in Gutenberg mixins and sets your repo to 'sword'
 and user to 'somu'. Those two variables are very important in Gutenberg. After
@@ -128,6 +123,8 @@ them in your `structure.md`.
 To understand how to write all this template things, just look into this repo's
 book folder. I love eating my own dog food. In fact, I cook it for myself.
 Barkety bark.
+
+
 
 Rake integration
 ----------------
