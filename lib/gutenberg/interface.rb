@@ -5,12 +5,14 @@ module Gutenberg
                    file        = 'README' << File.extname(Dir[structure].first),
                    pattern     = "#{directory}/*.*",
                    context     = "#{directory}/context.*",
+                   mixins      = Gutenberg::Mixins
                    &block)
       @directory = directory
       @structure = structure
       @file      = file
       @pattern   = pattern
       @context   = fetch(context)
+      @mixins    = mixins
     end
 
     def fetch(pattern)
@@ -25,11 +27,16 @@ module Gutenberg
       $stdout.reopen original
     end
 
+    def include_mixins
+      @mixins.each { |m| include m }
+    end
+
     def context_with(hash)
       Gutenberg.new {
         hash.each do |k,v|
           define_method(k) { v }
         end
+        include_mixins
       }
     end
 
@@ -38,7 +45,7 @@ module Gutenberg
     end
 
     def inject
-      return Gutenberg.new unless @context
+      return Gutenberg.new { include_mixins } unless @context
       case File.extname(@context)
       when '.rb'
         require './' << @context
