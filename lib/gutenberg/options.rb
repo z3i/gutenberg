@@ -43,5 +43,11 @@ module Gutenberg
         set :context, context
       end
     end
+
+    def parse_no_mixins
+      on '--no-mixins', 'Do not include mixins' do
+        set :mixins, Array.new
+      end
+    end
   end
 end
