@@ -37,7 +37,7 @@ module Gutenberg
     end
 
     def run
-      Parser.new.parser.parse!
+      Parser.new.parse
     end
 
     def self.run(*args)

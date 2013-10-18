@@ -2,9 +2,8 @@ require 'optparse'
 
 module Gutenberg
   class Parser
-    attr_reader :parser
-
     def initialize
+      @options = {}
       @parser = OptionParser.new do |parser|
         @parser = parser
         methods.delete_if { |m| not m.to_s.start_with? 'parse_'}.each { |m| send m }
@@ -13,6 +12,11 @@ module Gutenberg
 
     def on(*args, &block)
       @parser.on(*args, &block)
+    end
+
+    def parse
+      @parser.parse!
+      @options
     end
 
     def parse_help
