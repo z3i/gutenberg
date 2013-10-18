@@ -1,5 +1,5 @@
 require 'gutenberg/mixins/badges'
-require 'gutenberg/mixins/common'
+require 'gutenberg/mixins/links'
 require 'gutenberg/mixins/methods'
 
 module Gutenberg

@@ -202,6 +202,7 @@ Full list of avaliable mixins:
 + `{{rubygems}}`
 + `{{header}}`
 + `{{semver}}`
++ `{{repourl}}`
 
 
 
