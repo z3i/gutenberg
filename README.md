@@ -149,3 +149,18 @@ Workarounds for non-Ruby guys
 
 Since Gutenberg can into JSON and YAML, you may generate a context automatically
 using your own code so your version, your help information and these things are up-to-date.
+
+Remember that `gutenberg` executable has a lot of options so you can fine-tune it for your needs:
+
+```
+Usage: gutenberg [options]
+    -c, --context <path>             Specify context file
+    -d, --directory <path>           Specify documentation directory
+    -f, --file <path>                Change resulting file name, README.md by default
+    -h, --help                       Prints this message out
+        --no-mixins                  Do not include mixins
+    -p, --pattern <pattern>          Specify including file matching pattern
+    -s, --structure <pattern>        Specify structure pattern
+    -v, --version                    Prints Gutenberg version
+
+```
