@@ -6,7 +6,7 @@ module Gutenberg
       @options = {}
       @parser = OptionParser.new do |parser|
         @parser = parser
-        methods.delete_if { |m| not m.to_s.start_with? 'parse_'}.each { |m| send m }
+        methods.delete_if { |m| not m.to_s.start_with? 'parse_'}.sort.each { |m| send m }
       end
     end
 
@@ -19,18 +19,6 @@ module Gutenberg
       @options
     end
 
-    def parse_help
-      on '-h', '--help', 'Prints this message out' do
-        puts @parser
-        exit
-      end
-    end
-
-    def parse_version
-      on '-v', '--version', 'Prints Gutenberg version' do
-        puts 'Gutenberg ' << Gutenberg::VERSION
-        exit
-      end
-    end
+    include Options
   end
 end
