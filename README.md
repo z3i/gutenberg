@@ -100,7 +100,28 @@ Structure is hooked up first and should be a barebone of your README.
 For example, this repo README's structure looks like this:
 
 ```md
-book/structure.md
+{{header}}
+
+{{gem_version}}
+{{gemnasium}}
+{{code_climate}}
+
+{{introduction}}
+
+{{everywhere}}
+
+{{installation}}
+
+{{on_context}}
+
+{{on_structure}}
+
+{{usage}}
+
+{{rake}}
+
+{{workarounds}}
+
 ```
 
 As you see, `books/introduction.md` can be loaded just using Mustache's
