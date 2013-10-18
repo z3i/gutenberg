@@ -20,7 +20,7 @@ module Gutenberg
 
     def write(&block)
       original = $stdout.clone
-      $stdout.reopen File.open(file, 'w+')
+      $stdout.reopen File.open(@file, 'w+')
       yield
       $stdout.reopen original
     end
@@ -57,6 +57,7 @@ module Gutenberg
       Parser.new.parse.each do |o,v|
         instance_variable_set "@#{o}", v
       end
+      process
     end
 
     def self.run(*args)
