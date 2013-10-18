@@ -1,15 +1,13 @@
 Rake integration
 ----------------
 
-{{name}} easily integrates with Rake.
-
-You include this portion of code in your Rakefile:
+{{name}} easily integrates with Rake. You include this portion of code in your Rakefile:
 
 ```ruby
 {{Rakefile}}
 ```
 
-It adds two tasks, `see_readme` (for preview) and `readme` (for generating).  
-You’re pretty ready to use them!
+And you’re pretty ready to use them! It adds two tasks:
 
-    $ rake readme
+    rake readme      # Compile README.md
+    rake see_readme  # See README.md

@@ -7,12 +7,12 @@ module Gutenberg
     include Rake::DSL if defined? Rake::DSL
 
     def initialize(*args)
-      try_desc 'Compile README.md'
+      try_desc 'Compile README'
       task :readme do
         Gutenberg::Interface.new(*args).process
       end
 
-      try_desc 'See README.md'
+      try_desc 'Preview README'
       task :see_readme do
         Gutenberg::Interface.new(*args).inject
       end
