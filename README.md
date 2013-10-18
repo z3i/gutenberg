@@ -162,5 +162,4 @@ Usage: gutenberg [options]
     -p, --pattern <pattern>          Specify including file matching pattern
     -s, --structure <pattern>        Specify structure pattern
     -v, --version                    Prints Gutenberg version
-
 ```
