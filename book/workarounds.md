@@ -7,4 +7,5 @@ using your own code so your version, your help information and these things are 
 Remember that `gutenberg` executable has a lot of options so you can fine-tune it for your needs:
 
 ```
-{{options}}```
+{{options}}
+```

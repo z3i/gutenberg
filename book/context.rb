@@ -3,7 +3,7 @@ Gutenberg.new do
   user 'somu'
 
   structure read 'book/structure.md'
-  options `./bin/gutenberg -h`
+  options `./bin/gutenberg -h`.chomp
 
   mustache_introduction '`{{introduction}}`'
   mustache_header       '`{{head}}`'
