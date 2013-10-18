@@ -5,7 +5,7 @@ Gutenberg
 [![Dependency status](https://gemnasium.com/somu/gutenberg.png)](https://gemnasium.com/somu/gutenberg)
 [![Code readability](https://codeclimate.com/github/somu/gutenberg.png)](https://codeclimate.com/github/somu/gutenberg)
 
-**Gutenberg** compiles multiple templates into one README.
+**Gutenberg** dynamically compiles multiple templates into one README.
 
 It generates static readme file from Mustache-powered plaintext files,
 which link automatically. It has a built-in library of mixins module.
@@ -18,7 +18,8 @@ Everywhere
 ----------
 
 You can use Gutenberg everywhere: your project doesn’t need to be written in Ruby.
-Any language is OK, whether it is Python, PHP, or any other you prefer.
+Any language is OK, whether it is Python, PHP, or any other you prefer. If you’ve got
+a Mac, you already have Ruby installed, so don’t even bother with it.
 
 Get started
 ------------
@@ -88,22 +89,7 @@ Structure is hooked up first and should be a barebone of your README.
 For example, this repo README's structure looks like this:
 
 ```md
-{{header}}
-
-{{gem_version}}
-{{gemnasium}}
-{{code_climate}}
-
-{{introduction}}
-
-{{everywhere}}
-
-{{installation}}
-
-{{on_context}}
-
-{{usage}}
-
+book/structure.md
 ```
 
 As you see, `books/introduction.md` can be loaded just using Mustache's
