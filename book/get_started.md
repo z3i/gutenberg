@@ -18,4 +18,8 @@ It generates all the scaffolding: `book` folder, `context.yml` and `structure.md
 
     $ {{repo}}
 
+There are options, you can get a list using `-h` flag:
+
+    $ {{repo}} -h
+
 Now let's configure it for your project.
