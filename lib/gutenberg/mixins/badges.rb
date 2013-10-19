@@ -26,10 +26,15 @@ module Gutenberg
         "[![Code readability](#{url}.png)](#{url})"
       end
 
+      def gittip
+        "[![Gittip](http://badgr.co/Gittip/#{user}.png)](https://www.gittip.com/#{user}/)"
+      end
+
       alias code_climate codeclimate
       alias gemversion gem_version
       alias travis_ci travis
       alias travisci travis
+      alias git_tip gittip
     end
   end
 end
