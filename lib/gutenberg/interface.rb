@@ -2,7 +2,7 @@ module Gutenberg
   class Interface
     def initialize(directory   = 'book',
                    structure   = "#{directory}/structure.*",
-                   file        = 'README' << File.extname(Dir[structure].first),
+                   file        = 'README' << ((structs = Dir[structure]).empty? ? '.md' : File.extname(structs.first)),
                    pattern     = "#{directory}/*.*",
                    context     = "#{directory}/context.*",
                    mixins      = Gutenberg::Mixins,

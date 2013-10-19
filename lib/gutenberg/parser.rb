@@ -24,5 +24,6 @@ module Gutenberg
     end
 
     include Options
+    include Generator
   end
 end
