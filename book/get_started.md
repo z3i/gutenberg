@@ -13,12 +13,12 @@ Then you go to your project folder and say:
 
     $ {{repo}} --init
 
-It generates all the scaffolding: `book` folder, `context.yml` and `structure.md`.  
+It generates all the scaffolding: `book` folder, `context.yml`, and `structure.md`.  
 То generate `README.md`, you say:
 
     $ {{repo}}
 
-There are options, you can get a list using `-h` flag:
+There are options. You can get a list using `-h` flag:
 
     $ {{repo}} -h
 
