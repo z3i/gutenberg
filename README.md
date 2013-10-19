@@ -8,15 +8,8 @@ Gutenberg
 **Gutenberg** dynamically compiles multiple templates into one README.
 
 It generates a static README file from a bunch of [Mustache-powered](http://mustache.github.io) plain text
-files. It has a built-in library of mixins.
+files combined together. It has a built-in library of mixins.
 More on that later, now to basic features and how to get it working.
-
-Everywhere
-----------
-
-You can use Gutenberg everywhere: your project doesn’t need to be written in Ruby.
-Any language is OK. If you’ve got
-a Mac, you already have Ruby installed, so don’t even bother with it.
 
 Get started
 ------------
@@ -25,11 +18,23 @@ Gutenberg is avaliable as a gem, working under Ruby 1.8...2.1:
 
     $ gem install gutenberg
 
+You can use Gutenberg in a project written in any language, not only
+Ruby. It doesn’t matter. You must have Ruby installed, though. If you’re
+on Mac, you already have it built-in. Otherwise, [install Ruby](https://www.ruby-lang.org/en/downloads/).
+
 Then you go to your project folder and say:
 
     $ gutenberg --init
 
 It generates all the scaffolding: `book` folder, `context.yml`, and `structure.md`.  
+То generate `README.md`, you say:
+
+    $ gutenberg
+
+There are options. You can get a list using `-h` flag:
+
+    $ gutenberg -h
+
 Now let's configure it for your project.
 
 Context
@@ -65,8 +70,9 @@ mit: "[MIT](http://www.opensource.org/licenses/MIT)"
 }
 ```
 
-This one sets your repo to `"sword"` and user to `"somu"`. These variables are magic in Gutenberg. After they are set, 
-you can easily generate a header, for example, using built-in `{{head}}` variable. This is what you’ll get:
+This one sets your repo to `"sword"` and user to `"somu"`. These two variables are magic in Gutenberg.
+After they are set, you can easily generate a header, for example, using built-in `{{head}}` variable.
+This is what you’ll get:
 
     Sword
     =====
@@ -146,6 +152,10 @@ Structure
 Structure is the only obligatory file to have in Gutenberg.  
 Structure is a file called `structure` in `book` folder with any extension.
 
+Structure extension is used to decide what extension to use for `README`. So,
+if you have a `structure.md`, the generated file will be `README.md`. If it is
+`structure.txt`, Gutenberg will generate `README.txt`.
+
 Structure is hooked up first, it is the entry point and should be a barebone of your README.
 For example, this very README's structure looks like this:
 
@@ -158,9 +168,7 @@ For example, this very README's structure looks like this:
 
 {{introduction}}
 
-{{everywhere}}
-
-{{installation}}
+{{get_started}}
 
 {{on_context}}
 
@@ -223,7 +231,7 @@ Eating my own dog food
 
 Gutenberg loves using Gutenberg. Take a look at the [`book` folder](https://github.com/somu/gutenberg/tree/master//book) in this repo,
 you will see a good example of Gutenberg usage, just how Gutenberg authors
-use Gutenberg. **Gutenberg rules.**
+use Gutenberg.
 
 I love eating my own dog food. In fact, I cook it for myself. Barkety bark.
 
