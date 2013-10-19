@@ -2,8 +2,10 @@ Gutenberg.new do
   repo 'gutenberg'
   user 'somu'
 
-  self_structure { read 'book/structure.md'  }
-  self_context   { read 'book/context.rb'    }
+  default_structure { read 'lib/structure.md' }
+  self_structure    { read 'book/structure.md'  }
+  self_context      { read 'book/context.rb'    }
+
 
   describe_mixins do
     meths = Hash.new

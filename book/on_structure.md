@@ -11,6 +11,12 @@ For example, this repo README's structure looks like this:
 {{self_structure}}
 ```
 
+And this is the default structure:
+
+```md
+{{default_structure}}
+```
+
 As you see, `books/introduction.md` can be loaded just using Mustache's
 {{mustache_introduction}} variable. So treat `structure.md` like you’d treat
 a bookcover for your book pages (I won't ever call it `bookcover`, I swear).

@@ -98,8 +98,10 @@ Gutenberg.new do
   repo 'gutenberg'
   user 'somu'
 
-  self_structure { read 'book/structure.md'  }
-  self_context   { read 'book/context.rb'    }
+  default_structure { read 'lib/structure.md' }
+  self_structure    { read 'book/structure.md'  }
+  self_context      { read 'book/context.rb'    }
+
 
   describe_mixins do
     meths = Hash.new
@@ -163,6 +165,18 @@ For example, this repo README's structure looks like this:
 {{rake}}
 
 {{workarounds}}
+```
+
+And this is the default structure:
+
+```md
+{{header}}
+
+{{gem_version}}
+{{gemnasium}}
+{{code_climate}}
+
+<!-- Your templates: -->
 ```
 
 As you see, `books/introduction.md` can be loaded just using Mustache's
