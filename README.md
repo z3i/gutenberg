@@ -9,7 +9,7 @@ Gutenberg
 
 It generates a static README file from a bunch of [Mustache-powered](http://mustache.github.io) plain text
 files combined together. It has a built-in library of mixins.
-More on that later, now basic features and how to get it working.
+More on that later, now to basic features and how to get it working.
 
 Everywhere
 ----------
@@ -37,7 +37,7 @@ Context
 
 Context file is a file that is named `context` and has `.json`, `.yml` or `.rb` extension.
 
-Contexts contain all variables you want to write only once: your repo name, your project name,
+Contexts contain variables — everything you want to write only once: your repo name, your project name,
 pieces of code, et cetera. So, use it for everything that you want to store or to be dynamic.
 
 Context is not required. You can delete your `context.yml` if you don’t need any variables.
@@ -65,11 +65,9 @@ mit: "[MIT](http://www.opensource.org/licenses/MIT)"
 }
 ```
 
-This one includes all built-in Gutenberg mixins and sets your repo to `"sword"`
-and user to `"somu"`. Those two variables are very important in Gutenberg. After
-setting them, you can easily generate a header, for example, using built-in
-`{{head}}` variable, so in that case you'd receive something like this
-for your `{{head}}`:
+This one sets your repo to `"sword"` and user to `"somu"`. Those two variables are
+important in Gutenberg. After setting them, you can easily generate a header, for example,
+using built-in `{{head}}` variable. This is what you’d get:
 
     Sword
     =====
