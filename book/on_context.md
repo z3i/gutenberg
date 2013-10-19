@@ -22,9 +22,9 @@ Here are some examples:
 {{json_example}}
 ```
 
-This one sets your repo to `"sword"` and user to `"somu"`. Those two variables are very
-important in {{name}}. They’re magic. After setting them, you can easily generate a header,
-for example, using built-in {{mustache_header}} variable. This is what you’d get:
+This one sets your repo to `"sword"` and user to `"somu"`. These two variables are magic in {{name}}.
+After they are set, you can easily generate a header, for example, using built-in {{mustache_header}} variable.
+This is what you’ll get:
 
     Sword
     =====
