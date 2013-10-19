@@ -1,14 +1,14 @@
 Context
 -------
 
-Context file is a file named `context`. It has `.json`, `.yml` or `.rb` extension.
+Context file is a file named `context`. It has `.json`, `.yml`, or `.rb` extension.
 
 Contexts contain variables — everything you need to write only once: your repo name, your project name,
 pieces of code, et cetera. So, use it for everything you want to store or be dynamic.
 
 Context is not required. You can delete your `context.yml` if you don’t need any variables.
 
-Here are examples:
+Here are some examples:
 
 #### `context.yml`
 
@@ -23,7 +23,7 @@ Here are examples:
 ```
 
 This one sets your repo to `"sword"` and user to `"somu"`. Those two variables are very
-important in Gutenberg. They’re magical. After setting them, you can easily generate a header,
+important in {{name}}. They’re magic. After setting them, you can easily generate a header,
 for example, using built-in {{mustache_header}} variable. This is what you’d get:
 
     Sword
