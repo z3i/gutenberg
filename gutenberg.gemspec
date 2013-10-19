@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.email = 'somu@so.mu'
   s.homepage = 'http://github.com/somu/gutenberg'
 
-  s.files = Dir['lib/**/*']
+  s.files = Dir['lib/**/*'] << 'bin/gutenberg'
   s.executables << 'gutenberg'
 
   s.license = 'MIT'
