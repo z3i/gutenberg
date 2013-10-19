@@ -227,12 +227,12 @@ Full list of avaliable mixins:
 Eating my own dog food
 ----------------------
 
-I love eating my own dog food. In fact, I cook it for myself.  
-Barkety bark.
-
 Gutenberg loves using Gutenberg. Take a look at the [`book` folder](https://github.com/somu/gutenberg/tree/master//book) in this repo,
 you will see a good example of Gutenberg usage, just how Gutenberg authors
 use Gutenberg. **Gutenberg rules.**
+
+I love eating my own dog food. In fact, I cook it for myself.  
+Barkety bark.
 
 Rake integration
 ----------------
