@@ -247,6 +247,7 @@ Usage: gutenberg [options]
     -d, --directory <path>           Specify documentation directory
     -f, --file <path>                Change resulting file name, README.md by default
     -h, --help                       Prints this message out
+    -i, --init                       Initialize a project
         --no-mixins                  Do not include mixins
     -p, --pattern <pattern>          Specify including file matching pattern
     -s, --structure <pattern>        Specify structure pattern
