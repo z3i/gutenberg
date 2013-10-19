@@ -6,10 +6,10 @@ module Gutenberg
         context   = "#{directory}/context.yml"
         structure = "#{directory}/structure.md"
 
+        require 'fileutils'
         repo = File.basename(FileUtils.pwd)
         user = `whoami`.chomp
         
-        require 'fileutils'
         try_mkdir directory
         try_touch context
         try_touch structure
@@ -21,16 +21,23 @@ module Gutenberg
       end
     end
 
-    @@printer = lambda { |name, message| spaces = 25 - name.length; puts "#{name}#{'.' * spaces}#{message}" }
+    @@printer = lambda do |method, name, message|
+      name_dots     = '.' * (30 - name.length)
+      method_spaces = ' ' * (6  - method.length)
+      puts '#' << method << method_spaces << name << name_dots << message
+    end
 
     %w[touch mkdir open].each  do |m|
       define_method "try_#{m}" do |*args, &block|
+        to_print = [m, args.first]
         begin
           FileUtils.send m, *args, &block
-          @@printer.call(args.first, 'OK')
+          to_print << 'OK'
         rescue => e
-          @@printer.call(args.first, e)
-          abort "<= Can’t proceed! Fix the error above.\n"
+          to_print << e.to_s
+          abort "Fix the error:\n"
+        ensure
+          @@printer.call(*to_print)
         end
       end
     end
