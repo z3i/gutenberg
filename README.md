@@ -241,6 +241,7 @@ Full list of avaliable built-in mixins:
 + `{{coveralls}}`
 + `{{gemnasium}}`
 + `{{codeclimate}}`
++ `{{gittip}}`
 
 #### Links
 
