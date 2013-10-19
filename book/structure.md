@@ -6,6 +6,8 @@
 
 {{introduction}}
 
+{{what_for}}
+
 {{get_started}}
 
 {{on_context}}

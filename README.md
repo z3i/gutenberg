@@ -11,6 +11,18 @@ It generates a static `README` from a bunch of [Mustache-powered](http://mustach
 plain text files for your GitHub repository. It has a built-in library of mixins.
 More on that later, now to basic features and how to get it working.
 
+What for
+--------
+
+Using Gutenberg, you can divide your `README` into smaller parts for easier comprehension.
+You can take your code constants and inject it right into your `README`, the version for example,
+so you don’t manually change your `README` after each release.
+
+You can unleash your metaprogramming skills in `README`. You can take methods of some module and describe it.
+You can build a `README` for your piece of code that writes itself automatically without any manual efforts.
+
+It is just the same difference like between SASS and CSS.
+
 Get started
 ------------
 
@@ -168,6 +180,8 @@ For example, this very README's structure looks like this:
 {{code_climate}}
 
 {{introduction}}
+
+{{what_for}}
 
 {{get_started}}
 
