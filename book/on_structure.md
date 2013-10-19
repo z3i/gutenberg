@@ -22,5 +22,5 @@ And this is the default structure:
 ```
 
 After you've setup books folder, start creating pages inside it. They will be
-automatically hooked and put into a variable with the same name: you can use
+automatically hooked and put into corresponding variables with the same names: you can use
 them in your `structure.md`.
