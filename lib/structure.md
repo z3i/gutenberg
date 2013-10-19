@@ -2,6 +2,6 @@
 
 {{gem_version}}
 {{gemnasium}}
-{{code_climate}}
+{{codeclimate}}
 
 <!-- Your templates: -->

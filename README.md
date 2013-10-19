@@ -192,7 +192,7 @@ And this is the default structure:
 
 {{gem_version}}
 {{gemnasium}}
-{{code_climate}}
+{{codeclimate}}
 
 <!-- Your templates: -->
 ```
@@ -231,8 +231,7 @@ Gutenberg loves using Gutenberg. Take a look at the [`book` folder](https://gith
 you will see a good example of Gutenberg usage, just how Gutenberg authors
 use Gutenberg. **Gutenberg rules.**
 
-I love eating my own dog food. In fact, I cook it for myself.  
-Barkety bark.
+I love eating my own dog food. In fact, I cook it for myself. Barkety bark.
 
 Rake integration
 ----------------
