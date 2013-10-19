@@ -27,7 +27,7 @@ module Gutenberg
       end
 
       def gittip
-        "[![Gittip](http://badgr.co/Gittip/#{user}.png)](https://www.gittip.com/#{user}/)"
+        "[![Gittip](http://img.shields.io/Gittip/#{user}.png)](https://www.gittip.com/#{user}/)"
       end
 
       alias code_climate codeclimate
