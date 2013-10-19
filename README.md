@@ -65,9 +65,8 @@ mit: "[MIT](http://www.opensource.org/licenses/MIT)"
 }
 ```
 
-This one sets your repo to `"sword"` and user to `"somu"`. These variables are very
-important in Gutenberg. They’re magic. After setting them, you can easily generate a header,
-for example, using built-in `{{head}}` variable. This is what you’d get:
+This one sets your repo to `"sword"` and user to `"somu"`. These variables are magic in Gutenberg. After they are set, 
+you can easily generate a header, for example, using built-in `{{head}}` variable. This is what you’ll get:
 
     Sword
     =====
