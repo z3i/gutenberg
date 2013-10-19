@@ -20,7 +20,7 @@ module Gutenberg
 
     @@printer = lambda { |name, message| spaces = 25 - name.length; puts "#{name}#{'.' * spaces}#{message}" }
 
-    %w[touch mkdir open].each do |m|
+    %w[touch mkdir open].each  do |m|
       define_method "try_#{m}" do |*args, &block|
         begin
           FileUtils.send m, *args, &block
