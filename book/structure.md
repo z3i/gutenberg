@@ -6,9 +6,7 @@
 
 {{introduction}}
 
-{{everywhere}}
-
-{{installation}}
+{{get_started}}
 
 {{on_context}}
 
