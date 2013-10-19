@@ -149,10 +149,10 @@ end
 Structure
 ---------
 
-Structure is the only obligatory file to have in Gutenberg.  
+Structure is the only obligatory file in Gutenberg.  
 Structure is a file called `structure` in `book` folder with any extension.
 
-Structure extension is used to decide what extension to use for `README`. So,
+Structure extension decides what extension to use for `README`. So,
 if you have a `structure.md`, the generated file will be `README.md`. If it is
 `structure.txt`, Gutenberg will generate `README.txt`.
 
@@ -256,9 +256,9 @@ Workarounds for non-Ruby projects
 ---------------------------------
 
 Since Gutenberg can into JSON and YAML, you may generate a context automatically
-using your own code so your version, your help information and these things are up-to-date.
+using your own code, and your version, help information et cetera will be up-to-date.
 
-Remember that `gutenberg` executable has a lot of options so you can fine-tune it for your needs:
+Remember that `gutenberg` executable has a lot of options, so you can fine-tune it for your needs:
 
 ```
 Usage: gutenberg [options]
