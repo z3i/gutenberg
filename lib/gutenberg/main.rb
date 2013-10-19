@@ -13,7 +13,7 @@ module Gutenberg
       context.class_eval(&block) if block_given?
       context.template_file = Dir[structure].first
       $stdout.puts context.render
-      self.mixins = nil
+      @mixins = nil
     end
   end
 end
