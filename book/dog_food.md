@@ -5,5 +5,4 @@ Eating my own dog food
 you will see a good example of {{name}} usage, just how {{name}} authors
 use {{name}}. **{{name}} rules.**
 
-I love eating my own dog food. In fact, I cook it for myself.  
-Barkety bark.
+I love eating my own dog food. In fact, I cook it for myself. Barkety bark.
