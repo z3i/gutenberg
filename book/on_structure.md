@@ -1,10 +1,10 @@
 Structure
 ---------
 
-Structure is the only obligatory file to have in Gutenberg.  
+Structure is the only obligatory file in Gutenberg.  
 Structure is a file called `structure` in `book` folder with any extension.
 
-Structure extension is used to decide what extension to use for `README`. So,
+Structure extension desides what extension to use for `README`. So,
 if you have a `structure.md`, the generated file will be `README.md`. If it is
 `structure.txt`, {{name}} will generate `README.txt`.
 

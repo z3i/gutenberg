@@ -113,6 +113,7 @@ Gutenberg.new do
   repo 'gutenberg'
   user 'somu'
 
+  mixins_template   { read 'examples/mixins_example.md' }
   default_structure { read 'lib/structure.md'   }
   self_structure    { read 'book/structure.md'  }
   self_context      { read 'book/context.rb'    }
@@ -206,7 +207,32 @@ them in your `structure.md`.
 Mixins
 ------
 
-Full list of avaliable mixins:
+You can define mixins just by defining a method which lazily takes
+a variable and does something with it:
+
+```ruby
+Gutenberg.new do
+  user 
+
+  def name_caps
+    user.upcase
+  end
+
+  def profile
+    "https://github.com/#{user}"
+  end
+end
+```
+
+Then you can use it in your templates:
+
+```
+# {{name_caps}}
+
+[Check my GitHub profile]({{profile}})
+```
+
+Full list of avaliable built-in mixins:
 
 #### Badges
 
@@ -248,8 +274,8 @@ Gutenberg::Task.new
 And you’re pretty ready to use it! It adds two tasks:
 
 ```
-rake readme      # Compile README.md
-rake see_readme  # See README.md
+rake readme      # Compile README
+rake see_readme  # Preview README
 ```
 
 Workarounds for non-Ruby projects

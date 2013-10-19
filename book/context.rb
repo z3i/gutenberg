@@ -3,6 +3,7 @@ Gutenberg.new do
   repo 'gutenberg'
   user 'somu'
 
+  mixins_template   { read 'examples/mixins_example.md' }
   default_structure { read 'lib/structure.md'   }
   self_structure    { read 'book/structure.md'  }
   self_context      { read 'book/context.rb'    }
