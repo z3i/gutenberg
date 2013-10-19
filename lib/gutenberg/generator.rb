@@ -3,8 +3,8 @@ module Gutenberg
     def parse_init
       on '-i', '--init', 'Initialize a project' do 
         directory = @options[:directory] || 'book'
-        context   = "#{dir}/context.yml"
-        structure = "#{dir}/structure.md"
+        context   = "#{directory}/context.yml"
+        structure = "#{directory}/structure.md"
 
         repo = File.basename(FileUtils.pwd)
         user = `whoami`.chomp
