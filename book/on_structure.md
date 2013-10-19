@@ -4,7 +4,7 @@ Structure
 Structure is the only obligatory file to have in Gutenberg.  
 Structure is a file called `structure` in `book` folder with any extension.
 
-Structure is hooked up first and should be a barebone of your README.
+Structure is hooked up first, it is the entry point and should be a barebone of your README.
 For example, this very README's structure looks like this:
 
 ```md
