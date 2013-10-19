@@ -22,6 +22,16 @@ Here are examples:
 {{json_example}}
 ```
 
+This one includes all built-in Gutenberg mixins and sets your repo to 'sword'
+and user to 'somu'. Those two variables are very important in Gutenberg. After
+setting them, you can easily generate a header, for example, using built-in
+{{mustache_header}} variable, so in that case you'd receive something like this
+for your {{mustache_header}}:
+
+    Sword
+    =====
+
+
 #### `context.rb`
 
 Use `context.rb` if you need some advanced features, like putting your gem’s last version in a constant,  
@@ -37,7 +47,7 @@ In fact, it is equivalent to this:
 {{old_ruby_example}}
 ```
 
-Gutenberg itself uses this `context.rb`:
+This README itself uses this `context.rb`:
 
 ```ruby
 {{self_context}}

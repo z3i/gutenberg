@@ -68,6 +68,16 @@ mit: "[MIT](http://www.opensource.org/licenses/MIT)"
 }
 ```
 
+This one includes all built-in Gutenberg mixins and sets your repo to 'sword'
+and user to 'somu'. Those two variables are very important in Gutenberg. After
+setting them, you can easily generate a header, for example, using built-in
+`{{head}}` variable, so in that case you'd receive something like this
+for your `{{head}}`:
+
+    Sword
+    =====
+
+
 #### `context.rb`
 
 Use `context.rb` if you need some advanced features, like putting your gem’s last version in a constant,  
@@ -91,7 +101,7 @@ Gutenberg.new do
 end
 ```
 
-Gutenberg itself uses this `context.rb`:
+This README itself uses this `context.rb`:
 
 ```ruby
 Gutenberg.new do
@@ -138,7 +148,7 @@ Structure is the only obligatory file to have in Gutenberg.
 Structure is a file called `structure` in `book` folder with any extension.
 
 Structure is hooked up first and should be a barebone of your README.
-For example, this repo README's structure looks like this:
+For example, this very README's structure looks like this:
 
 ```md
 {{header}}
@@ -166,6 +176,10 @@ For example, this repo README's structure looks like this:
 {{workarounds}}
 ```
 
+As you see, `books/introduction.md` can be loaded just using Mustache's
+`{{introduction}}` variable. So treat `structure.md` like you’d treat
+a bookcover for your book pages (I won't ever call it `bookcover`, I swear).
+
 And this is the default structure:
 
 ```md
@@ -177,19 +191,6 @@ And this is the default structure:
 
 <!-- Your templates: -->
 ```
-
-As you see, `books/introduction.md` can be loaded just using Mustache's
-`{{introduction}}` variable. So treat `structure.md` like you’d treat
-a bookcover for your book pages (I won't ever call it `bookcover`, I swear).
-
-This one includes all built-in Gutenberg mixins and sets your repo to 'sword'
-and user to 'somu'. Those two variables are very important in Gutenberg. After
-setting them, you can easily generate a header, for example, using built-in
-`{{head}}` variable, so in that case you'd receive something like this
-for your `{{head}}`:
-
-    Sword
-    =====
 
 After you've setup books folder, start creating pages inside it. They will be
 automatically hooked and put into a variable with the same name: you can use
@@ -239,7 +240,7 @@ require 'gutenberg/task'
 Gutenberg::Task.new
 ```
 
-And you’re pretty ready to use them! It adds two tasks:
+And you’re pretty ready to use it! It adds two tasks:
 
 ```
 rake readme      # Compile README.md
