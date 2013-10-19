@@ -9,5 +9,6 @@ Rake integration
 
 And you’re pretty ready to use them! It adds two tasks:
 
-    rake readme      # Compile README.md
-    rake see_readme  # See README.md
+```
+{{rake_tasks}}
+```

@@ -25,6 +25,7 @@ Gutenberg.new do
   end
 
   options `./bin/gutenberg -h`.chomp
+  rake_tasks `rake -f examples/Rakefile -T`.chomp
 
   mustache_introduction '`{{introduction}}`'
   mustache_header       '`{{head}}`'

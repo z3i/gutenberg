@@ -121,6 +121,7 @@ Gutenberg.new do
   end
 
   options `./bin/gutenberg -h`.chomp
+  rake_tasks `rake -f examples/Rakefile -T`.chomp
 
   mustache_introduction '`{{introduction}}`'
   mustache_header       '`{{head}}`'
@@ -227,8 +228,10 @@ Gutenberg::Task.new
 
 And you’re pretty ready to use them! It adds two tasks:
 
-    rake readme      # Compile README.md
-    rake see_readme  # See README.md
+```
+rake readme      # Compile README.md
+rake see_readme  # See README.md
+```
 
 Workarounds for non-Ruby guys
 -----------------------------
