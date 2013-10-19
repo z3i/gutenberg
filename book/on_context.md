@@ -22,8 +22,8 @@ Here are examples:
 {{json_example}}
 ```
 
-This one includes all built-in Gutenberg mixins and sets your repo to `'sword'`
-and user to `'somu'`. Those two variables are very important in Gutenberg. After
+This one includes all built-in Gutenberg mixins and sets your repo to `"sword"`
+and user to `"somu"`. Those two variables are very important in Gutenberg. After
 setting them, you can easily generate a header, for example, using built-in
 {{mustache_header}} variable, so in that case you'd receive something like this
 for your {{mustache_header}}:
