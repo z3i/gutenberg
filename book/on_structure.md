@@ -13,7 +13,7 @@ For example, this very README's structure looks like this:
 
 As you see, `books/introduction.md` can be loaded just using Mustache's
 {{mustache_introduction}} variable. So treat `structure.md` like you’d treat
-a bookcover for your book pages (I won't ever call it `bookcover`, I swear).
+a bookcover for your book pages.
 
 And this is the default structure:
 
@@ -24,7 +24,3 @@ And this is the default structure:
 After you've setup books folder, start creating pages inside it. They will be
 automatically hooked and put into a variable with the same name: you can use
 them in your `structure.md`.
-
-To understand how to write all this template things, just look into this repo's
-book folder. I love eating my own dog food. In fact, I cook it for myself.
-Barkety bark.
