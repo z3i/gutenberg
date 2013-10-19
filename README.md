@@ -77,6 +77,7 @@ putting your program’s help message inside of README, and so on. Get used to t
 Gutenberg.new do
   repo 'sword'
   user 'somu'
+  lazy_ruby_version { RUBY_VERSION }
 end
 ```
 
@@ -86,6 +87,7 @@ In fact, it is equivalent to this:
 Gutenberg.new do
   def user; 'somu' end
   def repo; 'gutenberg' end
+  def lazy_ruby_version; RUBY_VERSON end
 end
 ```
 
