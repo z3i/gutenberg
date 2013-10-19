@@ -8,14 +8,14 @@ Gutenberg
 **Gutenberg** dynamically compiles multiple templates into one README.
 
 It generates a static README file from a bunch of [Mustache-powered](http://mustache.github.io) plain text
-files combined together. It has a built-in library of mixins.
+files. It has a built-in library of mixins.
 More on that later, now to basic features and how to get it working.
 
 Everywhere
 ----------
 
 You can use Gutenberg everywhere: your project doesn’t need to be written in Ruby.
-Any language is OK, whether it is Python, PHP, or any other you prefer. If you’ve got
+Any language is OK. If you’ve got
 a Mac, you already have Ruby installed, so don’t even bother with it.
 
 Get started
@@ -29,20 +29,20 @@ Then you go to your project folder and say:
 
     $ gutenberg --init
 
-It generates all the scaffolding: `book` folder, `context.yml` and `structure.md`.  
+It generates all the scaffolding: `book` folder, `context.yml`, and `structure.md`.  
 Now let's configure it for your project.
 
 Context
 -------
 
-Context file is a file named `context`. It has `.json`, `.yml` or `.rb` extension.
+Context file is a file named `context`. It has `.json`, `.yml`, or `.rb` extension.
 
 Contexts contain variables — everything you need to write only once: your repo name, your project name,
 pieces of code, et cetera. So, use it for everything you want to store or be dynamic.
 
 Context is not required. You can delete your `context.yml` if you don’t need any variables.
 
-Here are examples:
+Here are some examples:
 
 #### `context.yml`
 
@@ -65,8 +65,8 @@ mit: "[MIT](http://www.opensource.org/licenses/MIT)"
 }
 ```
 
-This one sets your repo to `"sword"` and user to `"somu"`. Those two variables are very
-important in Gutenberg. They’re magical. After setting them, you can easily generate a header,
+This one sets your repo to `"sword"` and user to `"somu"`. These variables are very
+important in Gutenberg. They’re magic. After setting them, you can easily generate a header,
 for example, using built-in `{{head}}` variable. This is what you’d get:
 
     Sword
