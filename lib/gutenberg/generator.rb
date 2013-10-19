@@ -5,12 +5,15 @@ module Gutenberg
         directory = @options[:directory] || 'book'
         context   = "#{dir}/context.yml"
         structure = "#{dir}/structure.md"
+
+        repo = File.basename(FileUtils.pwd)
+        user = `whoami`.chomp
         
         require 'fileutils'
         try_mkdir directory
         try_touch context
         try_touch structure
-        try_open(context,   'w') { |f| f.puts "repo: #{File.basename(FileUtils.pwd)}\nuser: #{`whoami`.chomp}" }
+        try_open(context,   'w') { |f| f.puts "repo: #{repo}\nuser: #{user}" }
         try_open(structure, 'w') { |f| f.puts File.read File.dirname(__FILE__) << '/../structure.md' }
 
         puts 'Scaffolding generated!'
