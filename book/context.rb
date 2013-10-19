@@ -1,4 +1,5 @@
 Gutenberg.new do
+  version Gutenberg::VERSION
   repo 'gutenberg'
   user 'somu'
 

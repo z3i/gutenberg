@@ -68,8 +68,8 @@ mit: "[MIT](http://www.opensource.org/licenses/MIT)"
 }
 ```
 
-This one includes all built-in Gutenberg mixins and sets your repo to `'sword'`
-and user to `'somu'`. Those two variables are very important in Gutenberg. After
+This one includes all built-in Gutenberg mixins and sets your repo to `"sword"`
+and user to `"somu"`. Those two variables are very important in Gutenberg. After
 setting them, you can easily generate a header, for example, using built-in
 `{{head}}` variable, so in that case you'd receive something like this
 for your `{{head}}`:
@@ -100,7 +100,7 @@ In fact, it is equivalent to this:
 Gutenberg.new do
   def user; 'somu' end
   def repo; 'gutenberg' end
-  def version; Gutenberg::VERSION end
+  def version; 1.1.0 end
   def lazy_ruby_version; RUBY_VERSON end
 end
 ```
@@ -109,6 +109,7 @@ This README itself uses this `context.rb`:
 
 ```ruby
 Gutenberg.new do
+  version Gutenberg::VERSION
   repo 'gutenberg'
   user 'somu'
 
