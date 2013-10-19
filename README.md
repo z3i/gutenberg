@@ -68,14 +68,16 @@ mit: "[MIT](http://www.opensource.org/licenses/MIT)"
 }
 ```
 
-This one includes all built-in Gutenberg mixins and sets your repo to 'sword'
-and user to 'somu'. Those two variables are very important in Gutenberg. After
+This one includes all built-in Gutenberg mixins and sets your repo to `'sword'`
+and user to `'somu'`. Those two variables are very important in Gutenberg. After
 setting them, you can easily generate a header, for example, using built-in
 `{{head}}` variable, so in that case you'd receive something like this
 for your `{{head}}`:
 
     Sword
     =====
+
+It is a taste of what is called mixins. More on that later.
 
 
 #### `context.rb`
