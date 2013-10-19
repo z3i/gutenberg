@@ -250,8 +250,8 @@ rake readme      # Compile README.md
 rake see_readme  # See README.md
 ```
 
-Workarounds for non-Ruby guys
------------------------------
+Workarounds for non-Ruby projects
+---------------------------------
 
 Since Gutenberg can into JSON and YAML, you may generate a context automatically
 using your own code so your version, your help information and these things are up-to-date.
