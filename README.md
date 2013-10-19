@@ -100,7 +100,7 @@ In fact, it is equivalent to this:
 Gutenberg.new do
   def user; 'somu' end
   def repo; 'gutenberg' end
-  def version; 1.1.1 end
+  def version; 1.1.2 end
   def lazy_ruby_version; RUBY_VERSON end
 end
 ```
