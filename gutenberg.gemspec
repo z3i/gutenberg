@@ -9,6 +9,7 @@ Gem::Specification.new do |s|
   s.homepage = 'http://github.com/somu/gutenberg'
 
   s.files = Dir['lib/**/*']
+  s.executables << 'gutenberg'
 
   s.license = 'MIT'
   s.summary = 'README.md generator'

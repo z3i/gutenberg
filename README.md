@@ -7,8 +7,8 @@ Gutenberg
 
 **Gutenberg** dynamically compiles multiple templates into one README.
 
-It generates a static README file from a bunch of [Mustache-powered](http://mustache.github.io) plain text
-files combined together. It has a built-in library of mixins.
+It generates a static `README` from a bunch of [Mustache-powered](http://mustache.github.io)
+plain text files for your GitHub repository. It has a built-in library of mixins.
 More on that later, now to basic features and how to get it working.
 
 Get started
@@ -100,7 +100,7 @@ In fact, it is equivalent to this:
 Gutenberg.new do
   def user; 'somu' end
   def repo; 'gutenberg' end
-  def version; 1.1.0 end
+  def version; 1.1.1 end
   def lazy_ruby_version; RUBY_VERSON end
 end
 ```
@@ -153,7 +153,7 @@ Structure
 Structure is the only obligatory file in Gutenberg.  
 Structure is a file called `structure` in `book` folder with any extension.
 
-Structure extension decides what extension to use for `README`. So,
+Structure extension desides what extension to use for `README`. So,
 if you have a `structure.md`, the generated file will be `README.md`. If it is
 `structure.txt`, Gutenberg will generate `README.txt`.
 
@@ -212,7 +212,7 @@ a variable and does something with it:
 
 ```ruby
 Gutenberg.new do
-  user 
+  user 'somu'
 
   def name_caps
     user.upcase
