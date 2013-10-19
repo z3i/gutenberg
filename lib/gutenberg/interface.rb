@@ -44,7 +44,7 @@ module Gutenberg
       return Gutenberg.new unless @context
       case File.extname(@context)
       when '.rb'
-        require './' << @context
+        require './' << @context.chomp(File.extname(@context))
       when '.yml'
         require 'yaml'
         context_with via(YAML)
