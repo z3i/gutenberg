@@ -7,55 +7,53 @@ Gutenberg
 
 **Gutenberg** dynamically compiles multiple templates into one README.
 
-It generates a static `README` from a bunch of [Mustache-powered](http://mustache.github.io)
-plain text files for your GitHub repository. It has a built-in library of mixins.
-More on that later, now to basic features and how to get it working.
+It generates a static `README` for your GitHub repository from a bunch of [Mustache-powered](http://mustache.github.io)
+plain-text files. It has a built-in library of mixins.
+More on mixins later, but now let’s start with the basic features and how to get it working.
 
 What for
 --------
 
-Using Gutenberg, you can divide your `README` into smaller parts for easier comprehension.
-You can take your code constants and inject it right into your `README`, the version for example,
-so you don’t manually change your `README` after each release.
+With Gutenberg you can divide your `README` into smaller parts to make it easier to read and maintain.
+You can take your code constants (the version number, for instance) and inject them right into your `README`, so that you don’t have to manually change the text after each release.
 
-You can unleash your metaprogramming skills in `README`. You can take methods of some module and describe it.
-You can build a `README` for your piece of code that writes itself automatically without any manual efforts.
+You can unleash your metaprogramming skills in `README`. You can even build a `README` for your piece of code that writes itself automatically.
 
-It is just the same difference like between SASS and CSS.
+It is just the same as using SASS with CSS.
 
-Get started
-------------
+Getting started
+---------------
 
 Gutenberg is avaliable as a gem, working under Ruby 1.8...2.1:
 
     $ gem install gutenberg
 
 You can use Gutenberg in a project written in any language, not only
-Ruby. It doesn’t matter. You must have Ruby installed, though. If you’re
-on Mac, you already have it built-in. Otherwise, [install Ruby](https://www.ruby-lang.org/en/downloads/).
+Ruby. You must have Ruby installed, though. If you’re
+on Mac, you already have it built in. Otherwise, see [install Ruby](https://www.ruby-lang.org/en/downloads/).
 
-Then you go to your project folder and say:
+Then go to your project folder and type:
 
     $ gutenberg --init
 
-It generates all the scaffolding: `book` folder, `context.yml`, and `structure.md`.  
-То generate `README.md`, you say:
+It generates all the scaffolding: the `book` folder, `context.yml`, and `structure.md`.  
+То generate `README.md` type:
 
     $ gutenberg
 
-There are options. You can get a list using `-h` flag:
+You can get the list of available options using the `-h` flag:
 
     $ gutenberg -h
 
-Now let's configure it for your project.
+Now let’s configure it for your project.
 
 Context
 -------
 
-Context file is a file named `context`. It has `.json`, `.yml`, or `.rb` extension.
+Context file is a file named `context`. It has a `.json`, `.yml`, or `.rb` extension.
 
 Contexts contain variables — everything you need to write only once: your repo name, your project name,
-pieces of code, et cetera. So, use it for everything you want to store or be dynamic.
+pieces of code, etc. Use it for everything you want to store and for everything you want to be dynamic.
 
 Context is not required. You can delete your `context.yml` if you don’t need any variables.
 
@@ -82,8 +80,8 @@ mit: "[MIT](http://www.opensource.org/licenses/MIT)"
 }
 ```
 
-This one sets your repo to `"sword"` and user to `"somu"`. These two variables are magic in Gutenberg.
-After they are set, you can easily generate a header, for example, using built-in `{{head}}` variable.
+This one sets your repo to `"sword"` and user to `"somu"`. These two variables are magical in Gutenberg.
+After they are set, you can easily generate a header, for example, using the built-in `{{head}}` variable.
 This is what you’ll get:
 
     Sword
@@ -94,8 +92,8 @@ It is a taste of what is called mixins. More on that later.
 
 #### `context.rb`
 
-Use `context.rb` if you need some advanced features, like putting your gem’s last version in a constant,  
-putting your program’s help message inside of README, and so on. Get used to this DSL:
+Use `context.rb` if you need some advanced features, like putting your gem’s last version into a constant,  
+putting your program’s help message inside README, and so on. Get used to this DSL:
 
 ```ruby
 Gutenberg.new do
@@ -106,7 +104,7 @@ Gutenberg.new do
 end
 ```
 
-In fact, it is equivalent to this:
+In fact, it is equivalent to:
 
 ```ruby
 Gutenberg.new do
@@ -163,14 +161,14 @@ Structure
 ---------
 
 Structure is the only obligatory file in Gutenberg.  
-Structure is a file called `structure` in `book` folder with any extension.
+Structure is a file called `structure` in the `book` folder with any extension.
 
 Structure extension desides what extension to use for `README`. So,
-if you have a `structure.md`, the generated file will be `README.md`. If it is
-`structure.txt`, Gutenberg will generate `README.txt`.
+if you have a `structure.md` the generated file will be `README.md`. If it is
+`structure.txt` Gutenberg will generate `README.txt`.
 
-Structure is hooked up first, it is the entry point and should be a barebone of your README.
-For example, this very README's structure looks like this:
+Structure is hooked up first, it is the entry point and should be the skeleton of your README.
+For example, this very README’s structure looks like this:
 
 ```md
 {{header}}
@@ -198,11 +196,11 @@ For example, this very README's structure looks like this:
 {{workarounds}}
 ```
 
-As you see, `books/introduction.md` can be loaded just using Mustache's
+As you see, `books/introduction.md` can be loaded just using Mustache’s
 `{{introduction}}` variable. So treat `structure.md` like you’d treat
-a bookcover for your book pages.
+a TOC for your book.
 
-And this is the default structure:
+This is the default structure:
 
 ```md
 {{header}}
@@ -214,8 +212,8 @@ And this is the default structure:
 <!-- Your templates: -->
 ```
 
-After you've setup books folder, start creating pages inside it. They will be
-automatically hooked and put into corresponding variables with the same names: you can use
+After you’ve setup the books folder, start creating pages inside it. They will be
+automatically hooked and put into corresponding variables with the same names. You can use
 them in your `structure.md`.
 
 Mixins
@@ -279,14 +277,14 @@ I love eating my own dog food. In fact, I cook it for myself. Barkety bark.
 Rake integration
 ----------------
 
-Gutenberg easily integrates with Rake. You include this portion of code in your Rakefile:
+Gutenberg easily integrates with Rake. Just include this portion of code in your Rakefile:
 
 ```ruby
 require 'gutenberg/task'
 Gutenberg::Task.new
 ```
 
-And you’re pretty ready to use it! It adds two tasks:
+and you’re pretty ready to use it! It adds two tasks:
 
 ```
 rake readme      # Compile README
@@ -296,8 +294,8 @@ rake see_readme  # Preview README
 Workarounds for non-Ruby projects
 ---------------------------------
 
-Since Gutenberg can into JSON and YAML, you may generate a context automatically
-using your own code, and your version, help information et cetera will be up-to-date.
+Since Gutenberg can use JSON and YAML, you may generate a context automatically
+using your own code. Your version number, help information, etc. will be up-to-date.
 
 Remember that `gutenberg` executable has a lot of options, so you can fine-tune it for your needs:
 
